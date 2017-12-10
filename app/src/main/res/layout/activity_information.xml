@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackbg">
+
+    <ImageView
+        android:id="@+id/flagIV"
+        android:layout_width="400dp"
+        android:layout_height="320dp"
+        android:src="@drawable/qatarinfo"
+        />
+
+    <TextView
+        android:id="@+id/NAMETV2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:ems="10"
+       android:text="Qatar is a high-income economy, backed by the world's third largest natural-gas reserves and oil reserves.The country has the highest per capita income in the world. Qatar is classified by the UN as a country of very high human development and is widely regarded as the most advanced Arab state for human development."
+        />
+
+</LinearLayout>

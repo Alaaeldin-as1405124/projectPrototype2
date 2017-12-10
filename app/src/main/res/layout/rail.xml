@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/blackbg"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <TextView
+        android:id="@+id/TitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Enter your name:"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Enter your name:"></TextView>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TitleLabel"
+        android:layout_marginTop="14dp"
+
+        android:ems="10"
+        android:hint="@string/enter_title_string"
+        android:inputType="textShortMessage">
+
+        <requestFocus />
+    </EditText>
+
+    <!-- Status -->
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/white"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="25dp"
+        android:text="Choose if you will pay using cash or card:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Choose if you will buy car using cash or card:" />
+
+    <RadioGroup
+        android:id="@+id/statusGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/status"
+        android:orientation="horizontal"
+        android:textColor="@color/white"
+        android:layout_marginTop="12dp" >
+
+        <RadioButton
+            android:id="@+id/statusDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Cash" />
+
+        <RadioButton
+            android:id="@+id/statusNotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@color/white"
+            android:text="Visa" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/rail" />
+    </RadioGroup>
+
+    <!-- Priority -->
+
+    <TextView
+        android:id="@+id/priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/statusGroup"
+        android:layout_marginTop="25dp"
+        android:text="Choose:"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Choose:" />
+
+    <RadioGroup
+        android:id="@+id/priorityGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/priority"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:text="@string/priority_string" >
+
+        <RadioButton
+            android:id="@+id/lowPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="@color/white"
+            tools:text="Student" />
+
+        <RadioButton
+            android:id="@+id/medPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Employee"
+            android:textColor="@color/white"
+            tools:text="Employee" />
+
+    </RadioGroup>
+
+    <!-- Time and Date -->
+
+    <TextView
+        android:id="@+id/time_and_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/priorityGroup"
+        android:layout_marginTop="25dp"
+        android:text="@string/time_and_date_string"
+        android:textColor="@color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/time_and_date"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        android:text="@string/no_date_set_string" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date_picker_button"
+        android:layout_alignParentEnd="true"
+        android:text="@string/no_time_set_string"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/date_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/date"
+        android:textColor="@color/white"
+        android:text="@string/choose_date_string" />
+
+    <Button
+        android:id="@+id/time_picker_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/date_picker_button"
+        android:layout_below="@id/time"
+        android:textColor="@color/white"
+        android:text="@string/choose_time_string" />
+
+    <!-- Buttons -->
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+
+        android:text="@string/cancel_string" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/reset_string" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/submit_string" />
+
+    <RadioButton
+        android:id="@+id/highPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/priorityGroup"
+        android:layout_toStartOf="@+id/submitButton"
+        android:text="Business Man"
+        android:textColor="@color/white"
+        tools:text="Business Man" />
+
+</RelativeLayout>
